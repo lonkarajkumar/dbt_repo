@@ -1,6 +1,17 @@
+{{
+    config(
+        materialized= 'table',
+        database='ESG_US_DEV_DB'
+    )
+}}
 
--- Use the `ref` function to select from other models
+with stg_employees AS (
 
-select *
-from {{ ref('my_first_dbt_model') }}
-where id = 1
+    select * from {{source('ESG_STG','STG_EMPLOYEES')}}
+)
+
+SELECT 
+
+*
+
+FROM stg_employees

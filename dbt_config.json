@@ -1,0 +1,11 @@
+{
+    "dag_id": "snowflake_test_custom",
+    "start_date": "2023-07-07",
+    "catchup": false,
+    "description": "Run example models in Snowflake",
+     "schedule_interval": "@hourly",
+    "default_args": {
+        "retries": 2,
+        "retry_delay": 2
+    }
+}

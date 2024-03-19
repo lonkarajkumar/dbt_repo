@@ -1,0 +1,12 @@
+version: 2
+sources:
+  - name: ESG_STG
+    database: ESG_US_DEV_DB
+    schema: ESG_STG
+    tables:
+      - name: STG_EMPLOYEES
+
+
+
+
+
